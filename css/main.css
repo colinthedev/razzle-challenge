@@ -706,6 +706,11 @@ body {
   margin: auto;
 }
 
+@media (min-width: 1280px) {
+  .loan-wrapper {
+    max-width: 95%;
+  }
+}
 .testimonial-wrapper {
   margin: auto;
   max-width: 22.5rem;
