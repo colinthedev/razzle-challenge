@@ -510,7 +510,7 @@ template {
   }
 }
 .hero-background {
-  background: url("../../../images/hero/mobile-hero.png");
+  background: url("../images/hero/mobile-hero.png");
   height: 20.1rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -529,7 +529,7 @@ template {
 }
 @media (min-width: 1280px) {
   .hero-background {
-    background: url("../../../images/hero/desktop-hero.png");
+    background: url("../images/hero/desktop-hero.png");
     height: 45rem;
     background-repeat: no-repeat;
     background-size: cover;
