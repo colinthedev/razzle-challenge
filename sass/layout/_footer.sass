@@ -1,0 +1,40 @@
+@use '../abstracts/mixins' as mixin
+@use '../abstracts/mixins' as breakpoint
+
+.footer-wrapper
+    display: flex
+    flex-direction: column
+    padding: 1.8rem
+
+    &__icons-wrapper
+        display: flex
+        flex-direction: row
+        width: 13.8rem
+        justify-content: space-between
+        margin: 2.6rem 0 2.5rem 0 
+
+        &-icon:nth-of-type(1)
+            @include mixin.footerIcon(#3c5b9b, .35rem)
+        
+        &-icon:nth-of-type(2)
+            @include mixin.footerIcon(#2daae1, .35rem)
+        
+        &-icon:nth-of-type(3)
+            @include mixin.footerIcon(#0173b2, .35rem)
+
+        &-icon:nth-of-type(4)
+            @include mixin.footerIcon(#e14e42, .25rem)
+
+    &__bottom-row
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-top: 2rem
+
+// Breakpoints
+@include breakpoint.for-desktop
+.footer-wrapper
+    padding: 1.8rem 1.8rem 0 1.8rem
+
+    &__bottom-row
+        margin: 2rem 0 3.7rem 0

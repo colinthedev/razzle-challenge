@@ -1,0 +1,60 @@
+@use '../abstracts/mixins' as breakpoint
+
+.main-container
+    display: grid
+    grid-template-rows: minmax(10vh, 6.5rem) minmax(auto, 20.1rem) minmax(33.2rem, auto) minmax(100rem, auto) minmax(40rem, auto) minmax(160rem, auto) minmax(26.7rem, auto)
+    grid-template-columns: [full-start] auto [center-start] repeat(12, [col-start] minmax(min-content, 5rem)[col-end]) [center-end] auto [full-end]
+
+.header-container
+    grid-row: 1 / 2
+    grid-column: full-start / full-end
+
+.hero-container
+    grid-row: 2 / 3
+    grid-column: full-start / full-end
+
+.careers-container
+    grid-row: 3 / 4
+    grid-column: full-start / full-end
+
+.advantages-container
+    grid-row: 4 / 5
+    grid-column: full-start / full-end
+
+.loan-container
+    grid-row: 5 / 6
+    grid-column: full-start / full-end
+
+.testimonial-container
+    grid-row: 6 / 7
+    grid-column: full-start / full-end
+
+.footer-container
+    grid-row: 7 / 8
+    grid-column: full-start / full-end
+
+// Breakpoints
+@include breakpoint.for-phone-landscape
+    .main-container
+        grid-template-rows: minmax(10vh, 6.5rem) minmax(auto, 20.1rem) minmax(33rem, auto) minmax(90rem, auto) minmax(30rem, auto) minmax(145rem, auto) minmax(23rem, auto)
+
+@include breakpoint.for-tablet-portrait
+    .main-container
+        grid-template-rows: minmax(10vh, 6.5rem) minmax(auto, 20.1rem) minmax(25rem, auto) minmax(90rem, auto) minmax(30rem, auto) minmax(148rem, auto) minmax(23rem, auto)
+
+@include breakpoint.for-tablet-landscape
+    .main-container
+        grid-template-rows: minmax(10vh, 6.5rem) minmax(auto, 20.1rem) minmax(29rem, auto) minmax(85rem, auto) minmax(30rem, auto) minmax(133rem, auto) minmax(23rem, auto)
+
+@include breakpoint.for-large-tablet
+    .main-container
+        grid-template-rows: minmax(10vh, 6.5rem) minmax(auto, 20.1rem) minmax(29rem, auto) minmax(80rem, auto) minmax(20.5rem, auto) minmax(120rem, auto) minmax(23rem, auto)
+
+@include breakpoint.for-desktop
+    .main-container
+        grid-template-rows: minmax(10vh, 14.7rem) minmax(auto, 20.1rem) minmax(29rem, auto) minmax(52rem, auto) minmax(23.8rem, auto) minmax(60rem, auto) minmax(20rem, auto)
+
+
+
+
+

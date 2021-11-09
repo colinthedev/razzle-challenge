@@ -1,0 +1,106 @@
+@use '../abstracts/variables' as var
+@use '../abstracts/mixins' as breakpoint
+@use '../abstracts/helpers'
+@use '../layout'
+@use  '../components'
+
+body
+    background-color: var.$primary-background
+
+// Advantages row-4
+.advantages-wrapper
+    display: flex
+    flex-direction: column
+
+    &__inner
+        width: 90%
+        margin: auto
+
+// Breakpoints
+@include breakpoint.for-desktop
+    .advantages-wrapper
+        flex-direction: row
+        align-items: center
+        justify-content: center
+        padding: 0 3.6rem
+
+        &__inner
+            width: 90%
+            margin: auto
+
+// row-5
+.loan-wrapper
+    max-width: 90%
+    margin: auto
+
+
+// Testimonials row-6
+.testimonial-wrapper
+    margin: auto
+    max-width: 22.5rem
+
+    &__inner
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        margin-top: 2.4rem
+
+        &__column
+            margin: 2.25rem 0 1rem 0
+
+    &__inner-image
+        display: block
+        height: 14rem
+        width: 13.1rem
+        object-fit: contain
+
+    &__inner-quote
+        display: block
+        height: 5.5rem
+        width: 6.6rem
+        object-fit: contain
+        background: transparent
+        position: absolute
+        top: 14.5rem
+        left: .75rem
+
+// Breakpoints
+@include breakpoint.for-phone-landscape
+    .testimonial-wrapper
+        max-width: 27rem
+
+@include breakpoint.for-tablet-portrait
+    .testimonial-wrapper
+        max-width: 27rem
+
+@include breakpoint.for-tablet-landscape
+    .testimonial-wrapper
+        max-width: 33rem
+
+@include breakpoint.for-large-tablet
+    .testimonial-wrapper
+        max-width: 38rem
+        margin-top: 5rem
+
+@include breakpoint.for-desktop
+    .testimonial-wrapper
+        display: flex
+        flex-direction: row
+        max-width: 90%
+        justify-content: space-around
+        align-items: stretch
+
+        &__inner
+            margin-top: 5rem
+            margin-bottom: 13.3rem
+
+        &__inner:nth-of-type(1)
+            max-width: 18rem
+
+        &__inner:nth-of-type(2)
+            max-width: 39rem
+
+        &__inner:nth-of-type(3)
+            max-width: 20rem

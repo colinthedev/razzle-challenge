@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as var
+
+@mixin primaryFont($background-color, $padding)
+  font-size: 1.8rem
+  line-height: 31px
+  text-align: left
+  color: var.$primary-font
+  background-color: $background-color
+  padding: $padding
+
+@mixin solidLine($display, $background-color, $margin, $width, $height, $deg) 
+  display: $display
+  width: $width
+  height: $height
+  background-color: $background-color
+  margin: $margin
+  transform: rotate($deg)
+
+@mixin footerIcon($background-color, $padding)
+  display: block
+  object-fit: contain
+  height: 2.3rem
+  width: 3rem
+  background-color: $background-color
+  padding: $padding
+
+// Breakpoints
+@mixin for-phone-landscape
+  @media screen and (max-width: 854px) and (orientation : landscape) 
+      @content
+
+@mixin for-tablet-portrait
+  @media (min-width: 768px)  
+    @content
+
+@mixin for-tablet-landscape
+  @media (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) 
+        @content
+
+@mixin for-large-tablet
+  @media (min-width : 1025px) and (max-width : 1366px) and (orientation : landscape) 
+        @content
+
+@mixin for-desktop
+  @media (min-width: 1280px)  
+    @content
+
+@mixin for-big-desktop
+  @media (min-width: 1800px)  
+    @content

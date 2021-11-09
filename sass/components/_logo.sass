@@ -1,0 +1,14 @@
+@use '../abstracts/mixins' as breakpoint
+
+.logo
+    display: block
+    height: 1.9rem
+    object-fit: contain
+    margin: 2.4rem auto
+
+// Breakpoint
+@include breakpoint.for-desktop
+    .logo
+        height: 3.5rem
+        width: 31.7rem
+        margin: 6.4rem 0 5.2rem 3.6rem

@@ -1,0 +1,29 @@
+@use '../abstracts/mixins' as mixin
+@use '../abstracts/mixins' as breakpoint
+@use '../abstracts/variables' as *
+
+// Div Line Colors
+$primary-section-line: #C2C2C2              // Primary section line
+$heading-line: #00945f                      // Heading line
+$footer-line: #00945F                       // Footer line
+$footer-vertical-line: #000000              // Footer bottom row line
+
+.line-break-short
+    @include mixin.solidLine(block, $heading-line, 13px auto 18px auto, 73px, 2px, 0deg)
+
+.line-break-long
+    @include mixin.solidLine(block, $primary-section-line, 25px auto 21px auto, 90%, 0.4px, 0deg)
+
+.line-break-full
+    @include mixin.solidLine(block, $footer-line, 0 0, 100%, 1px, 0deg)
+
+.line-break-vertical-only
+    @include mixin.solidLine(block, $footer-vertical-line, 0 7.5px, 10px, 1px, 90deg)
+
+// Breakpoint
+@include breakpoint.for-desktop
+    .line-break-long
+        @include mixin.solidLine(block, $primary-section-line, 0, 143px, 1px, 90deg)
+
+    .line-break-long:nth-of-type(4)
+        @include mixin.solidLine(none, $primary-section-line, 0, 0px, 0px, 90deg)

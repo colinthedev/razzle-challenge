@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *
+@use '../abstracts/mixins' as breakpoint
+
+.text-underline
+    text-decoration: underline
+
+.max-w-font
+    width: 90%
+
+.margin-center
+    margin: 0 auto
+
+.heading-background
+    display: block
+    margin-top: 3.6rem
+    background-color: $testimonial-heading-background
+
+// Breakpoint
+@include breakpoint.for-large-tablet
+     .heading-background
+         margin-top: 3rem
+
+@include breakpoint.for-desktop
+    .heading-background
+        margin-top: 6rem
+

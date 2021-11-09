@@ -1,0 +1,25 @@
+@use '../abstracts/mixins' as breakpoint
+
+.hero-background
+    background: url('../../../images/hero/mobile-hero.png')
+    height: 20.1rem
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+
+// Breakpoints 
+@include breakpoint.for-phone-landscape
+    .hero-background
+        height: 29rem
+
+@include breakpoint.for-tablet-portrait
+    .hero-background
+        height: 44rem
+
+@include breakpoint.for-desktop
+    .hero-background
+        background: url('../../../images/hero/desktop-hero.png')
+        height: 45rem
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center

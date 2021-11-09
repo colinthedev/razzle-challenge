@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as var
+@use '../abstracts/mixins' as breakpoint
+
+.primary-button
+    display: block
+    height: 4rem
+    width: 16.5rem
+    margin: 5.2rem auto 1rem auto
+    background-color: var.$primary-button-background
+
+// Breakpoint
+@include breakpoint.for-desktop
+    .primary-button
+        margin: 4.5rem auto 1rem auto

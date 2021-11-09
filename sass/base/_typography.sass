@@ -1,0 +1,76 @@
+@use '../abstracts/variables' as var
+@use '../abstracts/mixins' as *
+@use '../abstracts/mixins' as breakpoint
+
+*
+    font-family: var.$arialFont
+
+// Headings
+.cta-primary-headings
+    font-size: 3rem
+    color: var.$heading-primary-font
+    font-weight: 100
+    text-align: center
+    margin-top: 3.4rem
+// Breakpoint
+@include breakpoint.for-desktop
+    .cta-primary-headings
+        margin-top: 6.5rem
+
+.cta-secondary-headings
+    font-size: 2.3rem
+    color: var.$heading-primary-font
+    font-weight: 100
+    text-align: left
+    margin: 3.9rem 0 1.8rem 0
+
+.testimonial-heading
+    font-size: 2.2rem
+    color: var.$heading-secondary-font
+    line-height: 31px
+    font-weight: 100
+    text-align: center
+    padding: 1.5rem
+
+// Section content
+.primary-font
+    @include primaryFont(none, 0)
+
+.primary-font-loan-sect
+    @include primaryFont(var.$testimonial-secondary-background, .85rem)
+
+.products-link-font
+    font-size: 1.8rem
+    color: var.$products-link-font
+    line-height: 31px
+
+.testimonial-primary-font
+    font-size: 1.8rem
+    color: var.$testimonial-primary-font
+    line-height: 31px
+    letter-spacing: .25px
+
+.testimonial-secondary-font
+    font-size: 1.8rem
+    color: var.$testimonial-secondary-font
+    line-height: 28.84px
+
+// Footer
+.footer-primary-font
+    font-size: 1.1rem
+    color: var.$footer-primary-font
+    line-height: 1.2
+
+.footer-secondary-font
+    font-size: 1.2rem
+    color: var.$footer-secondary-font
+
+// Buttons
+.primary-button
+    font-size: 2.4rem
+    color: var.$primary-button-font
+
+// Misc
+.testimonial-quote
+    font-size: 20rem
+    color: var.$testimonial-quote-font
